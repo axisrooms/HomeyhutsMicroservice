@@ -149,9 +149,7 @@ public class Homeyhuts {
     )
     public ResponseEntity<?> updateRestriction(@Valid @RequestBody RestrictionRequest restrictionRequest) throws JsonProcessingException {
         ResponseEntity<?> responseEntity;
-        log.info("Request---------"+restrictionRequest);
         String req = MarshalUnmarshalUtils.serialize(restrictionRequest);
-        log.info("REQUEST(tostring)------------"+req);
         try {
             RestrictionResponse restrictionResponse = otaManager.updateRestriction(restrictionRequest);
             log.info("Restriction response--------"+restrictionResponse);

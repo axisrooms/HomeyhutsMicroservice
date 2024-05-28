@@ -181,7 +181,7 @@ public class HomeyhutsOtaManager implements OTAManager {
                 ResponseEntity<String> responseEntity = restTemplate
                         .postForEntity(getUpdateRestrictionUrl, entity, String.class);
                 String response= responseEntity.getBody();
-                log.info("Response for update restrcition....." + response);
+                log.info("Update restrcition Response FROM OTA" + response);
                 Utils.addOTAResponse(response, transactionLog);
                 RestrictionUpdateResponse restrictionUpdateResponse = MarshalUnmarshalUtils.deserialize(response, RestrictionUpdateResponse.class);
                 restrictionResponse = buildRestrictionResponse(restrictionUpdateResponse);
