@@ -35,6 +35,7 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDate;
 import java.util.*;
 
 import static com.axisrooms.homeyhuts.util.Constants.SUCCESS;
@@ -430,6 +431,12 @@ public class HomeyhutsOtaManager implements OTAManager {
                         ratePlanValidity.setStartDate(validity.getStartDate());
                         ratePlanValidity.setEndDate(validity.getEndDate());
                         ratePlanConfiguration.setValidityList(new ArrayList<RatePlanValidity>(Arrays.asList(ratePlanValidity)));
+                    }
+                    if (datum.getValidity() == null) {
+                        RatePlanValidity ratePlanValidity = new RatePlanValidity();
+                        ratePlanValidity.setStartDate(LocalDate.parse("2024-05-28"));
+                        ratePlanValidity.setEndDate(LocalDate.parse("2029-05-28"));
+                        ratePlanConfiguration.setValidityList(new ArrayList<>(Arrays.asList(ratePlanValidity)));
                     }
                     ratePlanDescription.setCurrency(datum.getCurrency());
                     List<String> occupancies = new ArrayList<>();
