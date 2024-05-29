@@ -61,9 +61,9 @@ public class Utils {
         transactionLog.setId(id);
         transactionLog.setHotelId(hotelId);
         transactionLog.setOperation(operation);
-        transactionLog.setOta(OTA.REZOLV);
+        transactionLog.setOta(OTA.HOMEYHUTS);
         transactionLog.setDate(LocalDate.now());
-        transactionLog.setService(ServiceName.REZOLV_SERVICE);
+        transactionLog.setService(ServiceName.HOMEYHUTS_SERVICE);
         transactionLog.setRoomId(roomId);
     }
 

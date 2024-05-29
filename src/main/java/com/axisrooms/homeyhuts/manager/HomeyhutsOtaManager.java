@@ -72,7 +72,7 @@ public class HomeyhutsOtaManager implements OTAManager {
     @Value("${staymaker-ota.communication.password}")
     private String password;*/
 
-    @Value("${rezolv-ota.communication.apitoken}")
+    @Value("${homeyhuts-ota.communication.apitoken}")
     private String apiKey;
 
     @Autowired

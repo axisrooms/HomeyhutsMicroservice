@@ -2,5 +2,5 @@ package com.axisrooms.homeyhuts.enums;
 
 public enum ServiceName {
 
-    REZOLV_SERVICE
+    HOMEYHUTS_SERVICE
 }
