@@ -27,7 +27,7 @@ repositories {
 
 
 jar {
-    baseName = 'HomeyhutsMicroService'
+    baseName = 'homeyhutsMicroService'
     version = '0.1.0'
 }
 
