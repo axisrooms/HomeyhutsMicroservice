@@ -91,6 +91,7 @@ public class HomeyhutsOtaManager implements OTAManager {
         RatePlanInfoRequest ratePlanInfoRequest = buildRatePlanInfoRequest(hotelId, roomId);
 //        ProductInfoRequest productInfoRequest = buildProductInfoRequest(hotelId);
         RatePlanInfoResponse ratePlanInfoResponse = getRatePlanInfo(ratePlanInfoRequest);
+        log.info("Response from OTA :"+ratePlanInfoResponse);
 //        ProductInfoResponse productInfoResponse = getProductInfo(productInfoRequest);
         RatePlanResponse ratePlanResponse = buildRatePlansResponse(ratePlanInfoResponse, roomId);
         return ratePlanResponse;
@@ -386,7 +387,7 @@ public class HomeyhutsOtaManager implements OTAManager {
         String response = "";
 //        response = restTemplate.postForObject(getRoomsUrl, entity, String.class);  use this URL for getRooms
         response = restTemplate.postForObject(getProductInfoUrl, entity, String.class);//use this for getRatePlans
-        log.info("Axisrooms ota get rate plans Response=" + response);
+        log.info("Response from OTA :"+response);
         return MarshalUnmarshalUtils.deserialize(response, RatePlanInfoResponse.class);
     }
 
