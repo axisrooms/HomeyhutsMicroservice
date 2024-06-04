@@ -499,9 +499,6 @@ public class HomeyhutsOtaManager implements OTAManager {
                             restrictionsDetails.setValue(eachRateplanDetail.getRestrictions().getValue());
                         }
                         restrictionsDetails.setType(eachRateplanDetail.getRestrictions().getType());
-                        if (restrictionsDetails.getType().equals("MLOS")){
-                            restrictionsDetails.setType("MLos");
-                        }
                         List<com.axisrooms.homeyhuts.generated.updateRestriction.Periods> periods = new ArrayList<>();
                         restrictionsDetails.setPeriods(periods);
                         for (Period eachPeriod : eachRateplanDetail.getRestrictions().getPeriods()) {

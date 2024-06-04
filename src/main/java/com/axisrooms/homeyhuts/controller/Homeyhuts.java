@@ -152,7 +152,6 @@ public class Homeyhuts {
         String req = MarshalUnmarshalUtils.serialize(restrictionRequest);
         try {
             RestrictionResponse restrictionResponse = otaManager.updateRestriction(restrictionRequest);
-            log.info("Restriction response--------"+restrictionResponse);
             responseEntity = new ResponseEntity<>(restrictionResponse, HttpStatus.OK);
         } catch (Throwable throwable) {
             log.error("Encountered exception while update restrictions", throwable);
